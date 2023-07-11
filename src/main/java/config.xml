@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+   <bean class="com.springcore.spring_core_learn.Student" name="student1">
+   <property name="roll">
+   <value>12</value>
+   </property>
+   <property name="name">
+   <value>Shashank</value>
+   </property>
+   <property name="address">
+   <value>Patna</value>
+   </property>
+   </bean>
+   
+   <bean class="com.springcore.spring_core_learn.Student" name="student2">
+   <property name="roll" value="10"/>
+   <property name="name" value="Rakesh"/>
+   <property name="address" value="Delhi"/>
+   </bean>
+   
+   <bean class="com.springcore.spring_core_learn.Student" name="student3" p:roll="13" p:name="Anushka" p:address="Mumbai" />
+   
+   <bean class="collection.emp" name="e1">
+   <property name="id" value="1"/>
+   <property name="adress">
+   <list>
+   <value>Delhi</value>
+   <value>Mumbai</value>
+   <value>Pune</value>
+   </list>
+   </property>
+   <property name="phones">
+   <set>
+   <value>930825422</value>
+   <value>923423423</value>
+   </set>
+   </property>
+   <property name="work">
+   <map>
+   <entry key="123" value="done"/>
+   <entry key="214" value="notdone"/>
+   <entry key="323" value="done"/>
+    </map>
+   </property>
+   
+   </bean>
+   
+   
+</beans>

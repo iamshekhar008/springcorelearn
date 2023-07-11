@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+  <bean class="com.springcore.ref.B" name="bref">
+  <property name="y1" value="14"/>
+  </bean>
+  
+  <bean class="com.springcore.ref.A" name="aref">
+  <property name="x1" value="123"/>
+  <property name="ob">
+  <ref bean="bref"/>
+  </property>
+  </bean>
+  
+  <bean class="com.springcore.ref.certi" name="c1">
+  <constructor-arg value="Mathematics hons."/>
+  </bean>
+  
+  <bean class="com.springcore.ref.person" name="p1">
+  <constructor-arg value="12" />
+  <constructor-arg value="Ramesh" />
+  <constructor-arg ref="c1"/>
+  </bean>
+  
+  <bean class="com.springcore.ref.addition" name="add1">
+  <constructor-arg value="13" type="double" index="1"/>
+  <constructor-arg value="43" type="double" index="0"/>
+  </bean>
+  
+   
+</beans>
